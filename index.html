@@ -1,209 +1,1321 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiago Dantas - Psicólogo</title>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5WWPHWDP9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-M5WWPHWDP9');
-  </script>
-
-  <style>
-    @font-face {
-      font-family: 'Telegraf';
-      src: url('Telegraf-Regular.ttf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'TelegrafBold';
-      src: url('Telegraf-Bold.ttf') format('truetype');
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Telegraf', sans-serif;
-      background-color: #f8f8ff;
-      color: #1c2464;
-    }
-
-    h1, h2, h3 {
-      font-family: 'TelegrafBold', sans-serif;
-      font-size: 36px;
-    }
-
-    section {
-      padding: 2em;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .escuro {
-      background-color: #1c2464;
-      color: white;
-    }
-
-    .claro {
-      background-color: #f8f8ff;
-      color: #1c2464;
-    }
-
-    .perfil-container {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .foto-perfil {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .logo-crp {
-      width: 385px;
-      height: 385px;
-      object-fit: contain;
-    }
-
-    .botao-whatsapp {
-      display:inline-block;
-      background-color:green;
-      color:white;
-      padding:10px 20px;
-      text-decoration:none;
-      border-radius:5px;
-      margin-top: 1em;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .botao-whatsapp:hover {
-      background-color: #006400;
-    }
-
-    .avaliacao {
-      font-size: 24px;
-      color: gold;
-      margin-bottom: 10px;
-    }
-
-    .depoimento {
-      margin-bottom: 4em;
-      font-size: 17px;
-      line-height: 1.7;
-      padding-bottom: 1em;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    a {
-      color: inherit;
-    }
-
-    nav {
-      background-color: #1c2464;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* NOVO ESTILO PARA O BOTÃO CENTRALIZADO */
-    .botao-central {
-      text-align: center;
-      margin: 1.5em 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicólogo Thiago Dantas | Bem-Estar Emocional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/codec-pro" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #1c2464;
+            --azul-claro: #2d3a8c;
+            --branco: #f8f8ff;
+            --verde-whatsapp: #25D366;
+            --cinza-claro: #f0f0f0;
+            --cinza-escuro: #333;
+            --destaque: #ff6b6b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Cabeçalho com fonte Codec Pro - MENOS ESPAÇO */
+        header {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 0.8rem 0; /* Reduzido o espaçamento vertical */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1.2rem; /* Espaçamento reduzido entre itens */
+        }
+        
+        /* Aplicando a fonte Codec Pro para os itens de navegação */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.3rem 0; /* Reduzido o padding vertical */
+            position: relative;
+            transition: all 0.3s ease;
+            font-size: 1rem; /* Tamanho de fonte ligeiramente menor */
+            font-family: 'Codec Pro', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; /* Linha mais fina */
+            background-color: var(--branco);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section com logo acima da imagem grande - MAIS ALTO */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-claro) 100%);
+            color: white;
+            padding: 1.5rem 0 2rem; /* Reduzido o padding vertical */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 20%);
+        }
+        
+        .hero-content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-logo {
+            text-align: center;
+            margin-bottom: 1rem; /* Margem reduzida */
+            z-index: 2;
+        }
+        
+        .hero-logo img {
+            height: 150px; /* Logo menor */
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-logo img:hover {
+            transform: scale(1.05);
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem; /* Espaço reduzido entre colunas */
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem; /* Título menor */
+            margin-bottom: 1rem; /* Margem reduzida */
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.1rem; /* Texto menor */
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            max-width: 700px;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem; /* Espaço reduzido entre botões */
+            margin-top: 1.5rem; /* Margem reduzida */
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinhado ao topo */
+            height: 100%;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 380px; /* Imagem ligeiramente menor */
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Sombra mais suave */
+            border: 4px solid rgba(255,255,255,0.3); /* Borda mais fina */
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .hero-info {
+            display: flex;
+            gap: 1.5rem; /* Espaço reduzido entre itens */
+            margin-top: 2rem; /* Margem reduzida */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Espaço reduzido entre ícone e texto */
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px; /* Padding reduzido */
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem; /* Texto menor */
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px; /* Botões mais compactos */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 1rem; /* Fonte menor */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra mais suave */
+        }
+        
+        .btn-primary {
+            background-color: var(--verde-whatsapp);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5); /* Sombra mais suave */
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--azul-escuro);
+        }
+        
+        /* Seções alternadas - MENOS ESPAÇO */
+        .section {
+            padding: 4rem 0; /* Reduzido o espaçamento vertical */
+        }
+        
+        .section-dark {
+            background-color: var(--azul-escuro);
+            color: white;
+        }
+        
+        .section-light {
+            background-color: var(--branco);
+            color: var(--cinza-escuro);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.2rem; /* Margem reduzida */
+            font-size: 2.2rem; /* Título menor */
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px; /* Linha mais curta */
+            height: 4px;
+            background: var(--destaque);
+            margin: 12px auto; /* Margem reduzida */
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 2.5rem; /* Margem reduzida */
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.15rem; /* Texto menor */
+            color: var(--cinza-escuro);
+        }
+        
+        .section-dark .section-subtitle {
+            color: rgba(255,255,255,0.85);
+        }
+        
+        /* Suas Dores (Termos suavizados) */
+        .dores-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards mais estreitos */
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
+        }
+        
+        .dor-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra mais suave */
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .section-dark .dor-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .dor-card:hover {
+            transform: translateY(-10px); /* Elevação reduzida */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Sombra mais suave */
+        }
+        
+        .dor-icon {
+            background: var(--azul-claro);
+            height: 90px; /* Altura reduzida */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem; /* Ícone menor */
+        }
+        
+        .dor-content {
+            padding: 1.5rem; /* Espaço interno reduzido */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dor-content h3 {
+            margin-bottom: 1rem; /* Margem reduzida */
+            color: var(--azul-escuro);
+            font-size: 1.5rem; /* Título menor */
+        }
+        
+        .section-dark .dor-content h3 {
+            color: white;
+        }
+        
+        .dor-content p {
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .dor-content .btn {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        
+        /* Como Funciona */
+        .processo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 0.5rem; /* Margem reduzida */
+        }
+        
+        .processo-item {
+            flex: 1;
+            min-width: 260px; /* Largura mínima menor */
+            max-width: 340px; /* Largura máxima menor */
+            text-align: center;
+            padding: 2rem 1.5rem; /* Espaço interno reduzido */
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06); /* Sombra mais suave */
+            transition: all 0.3s ease;
+        }
+        
+        .section-dark .processo-item {
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .processo-item:hover {
+            transform: translateY(-8px); /* Elevação reduzida */
+        }
+        
+        .processo-numero {
+            width: 60px; /* Tamanho menor */
+            height: 60px; /* Tamanho menor */
+            background: var(--azul-escuro);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem; /* Fonte menor */
+            font-weight: 700;
+            margin: 0 auto 1.5rem; /* Margem reduzida */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
+        }
+        
+        .section-dark .processo-numero {
+            background: white;
+            color: var(--azul-escuro);
+        }
+        
+        .processo-item h3 {
+            margin-bottom: 1rem; /* Margem reduzida */
+            color: var(--azul-escuro);
+            font-size: 1.4rem; /* Título menor */
+        }
+        
+        .section-dark .processo-item h3 {
+            color: white;
+        }
+        
+        .processo-item p {
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
+        }
+        
+        /* Depoimentos */
+        .depoimentos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards mais estreitos */
+            gap: 2rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
+        }
+        
+        .depoimento-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem; /* Espaço interno reduzido */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06); /* Sombra mais suave */
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .section-dark .depoimento-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .depoimento-card:hover {
+            transform: translateY(-8px); /* Elevação reduzida */
+        }
+        
+        .depoimento-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px; /* Posição ajustada */
+            left: 20px; /* Posição ajustada */
+            font-size: 5rem; /* Tamanho menor */
+            color: rgba(28, 36, 100, 0.08);
+            font-family: serif;
+            line-height: 1;
+            z-index: 1;
+        }
+        
+        .depoimento-texto {
+            font-style: italic;
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            position: relative;
+            z-index: 2;
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
+        }
+        
+        .depoimento-autor {
+            font-weight: 700;
+            color: var(--azul-escuro);
+            font-size: 1rem; /* Texto menor */
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-dark .depoimento-autor {
+            color: white;
+        }
+        
+        /* Contato */
+        .contato-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas mais estreitas */
+            gap: 2.5rem; /* Espaço reduzido */
+            margin-top: 1.5rem; /* Margem reduzida */
+        }
+        
+        .contato-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem; /* Espaço reduzido */
+        }
+        
+        .contato-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem; /* Espaço reduzido */
+        }
+        
+        .contato-icon {
+            width: 55px; /* Tamanho menor */
+            height: 55px; /* Tamanho menor */
+            background: var(--azul-escuro);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem; /* Ícone menor */
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
+        }
+        
+        .section-dark .contato-icon {
+            background: white;
+            color: var(--azul-escuro);
+        }
+        
+        .contato-text h3 {
+            margin-bottom: 0.4rem; /* Margem reduzida */
+            color: var(--azul-escuro);
+            font-size: 1.2rem; /* Título menor */
+        }
+        
+        .section-dark .contato-text h3 {
+            color: white;
+        }
+        
+        .contato-text p {
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
+        }
+        
+        .contato-text a {
+            color: var(--azul-escuro);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .section-dark .contato-text a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .contato-text a:hover {
+            color: var(--azul-claro);
+        }
+        
+        .section-dark .contato-text a:hover {
+            opacity: 0.8;
+        }
+        
+        .contato-form {
+            background: white;
+            padding: 2rem; /* Espaço interno reduzido */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra mais suave */
+        }
+        
+        .section-dark .contato-form {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .contato-form h3 {
+            color: var(--azul-escuro);
+            margin-bottom: 1.5rem; /* Margem reduzida */
+            font-size: 1.6rem; /* Título menor */
+            text-align: center;
+        }
+        
+        .section-dark .contato-form h3 {
+            color: white;
+        }
+        
+        .form-group {
+            margin-bottom: 1.2rem; /* Margem reduzida */
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem; /* Margem reduzida */
+            font-weight: 600;
+            color: var(--cinza-escuro);
+        }
+        
+        .section-dark .form-group label {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px; /* Padding reduzido */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem; /* Texto menor */
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.9);
+        }
+        
+        .section-dark .form-group input,
+        .section-dark .form-group textarea {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--azul-claro);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 58, 140, 0.2);
+        }
+        
+        .btn-form {
+            background: var(--azul-escuro);
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 14px; /* Padding reduzido */
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1rem; /* Texto menor */
+            margin-top: 0.3rem; /* Margem reduzida */
+        }
+        
+        .btn-form:hover {
+            background: var(--azul-claro);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra mais suave */
+        }
+        
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px; /* Posição mais baixa */
+            right: 25px; /* Posição mais próxima da borda */
+            width: 60px; /* Tamanho menor */
+            height: 60px; /* Tamanho menor */
+            background-color: var(--verde-whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem; /* Ícone menor */
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); /* Sombra mais suave */
+            z-index: 100;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+            70% {
+                transform: scale(1.08);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Espaço para vídeo do Google Drive - Solução definitiva */
+        .drive-container {
+            margin: 3rem auto; /* Margem reduzida */
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Sombra mais suave */
+            position: relative;
+            cursor: pointer;
+            background: #000;
+        }
+        
+        .drive-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border-radius: 15px;
+        }
+        
+        .drive-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .drive-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            transition: opacity 0.5s ease;
+            cursor: pointer;
+            background-color: #000;
+        }
+        
+        .drive-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+        
+        .drive-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px; /* Tamanho menor */
+            height: 70px; /* Tamanho menor */
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            transition: all 0.3s ease;
+        }
+        
+        .drive-play-button i {
+            color: var(--azul-escuro);
+            font-size: 2.2rem; /* Ícone menor */
+            margin-left: 5px;
+        }
+        
+        .drive-thumbnail:hover .drive-play-button {
+            background-color: rgba(255, 255, 255, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        /* Rodapé */
+        footer {
+            background: var(--azul-escuro);
+            color: white;
+            padding: 2.5rem 0 1.5rem; /* Espaço reduzido */
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.8rem; /* Espaço reduzido */
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 150px; /* Logo menor */
+            width: auto;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.5rem; /* Espaço reduzido */
+            margin: 1.2rem 0; /* Margem reduzida */
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.6rem; /* Ícones menores */
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Tamanho menor */
+            height: 50px; /* Tamanho menor */
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-6px); /* Elevação reduzida */
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.8rem; /* Espaço reduzido */
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1.2rem 0; /* Margem reduzida */
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95rem; /* Texto menor */
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem; /* Margem reduzida */
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem; /* Texto menor */
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-image {
+                order: 2;
+                margin-top: 1.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-logo img {
+                height: 130px;
+            }
+            
+            .footer-logo img {
+                height: 130px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav li {
+                margin: 0 0.8rem;
+            }
+            
+            .hero {
+                padding: 1.2rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 10px 25px;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-logo img {
+                height: 110px;
+            }
+            
+            .footer-logo img {
+                height: 110px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav li {
+                margin: 0 0.4rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-logo img {
+                height: 100px;
+            }
+            
+            .footer-logo img {
+                height: 100px;
+            }
+            
+            .drive-play-button {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .drive-play-button i {
+                font-size: 1.8rem;
+            }
+            
+            .info-item {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Cabeçalho apenas com links de navegação -->
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#dores">Desafios</a></li>
+                    <li><a href="#processo">Como Funciona</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <nav>
-    <a href="#quem-sou-eu">Quem sou eu</a>
-    <a href="#depoimentos">Depoimentos</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <!-- Hero Section com logo acima da imagem grande -->
+    <section id="home" class="hero">
+        <div class="hero-content-container">
+            <!-- Logo acima da imagem grande -->
+            <div class="hero-logo">
+                <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas">
+            </div>
+            
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Transforme sua vida emocional</h1>
+                    <p>Atendimento psicológico especializado para superar desafios emocionais e construir relacionamentos mais saudáveis</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+consulta&type=phone_number&app_absent=0" class="btn btn-primary">Comece hoje mesmo</a>
+                        <a href="#processo" class="btn btn-secondary">Como funciona</a>
+                    </div>
+                    
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <i class="fas fa-video"></i> Atendimento Online (Brasil)
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i> Atendimento Presencial (Aracaju)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="foto_grande.jpg" alt="Psicólogo Thiago Dantas">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="claro" id="quem-sou-eu">
+    <!-- Espaço para Vídeo do Google Drive - Solução definitiva -->
     <div class="container">
-      <div class="perfil-container">
-        <img src="minha_foto.png" alt="Foto de Thiago Dantas" class="foto-perfil">
-        <img src="Logo-perto-com-CRP.png" alt="Logo com CRP" class="logo-crp">
-      </div>
-
-      <!-- BOTÃO ADICIONADO AQUI -->
-      <div class="botao-central">
-        <a class="botao-whatsapp" href="https://wa.me/5579996037276?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consulta">
-          Comece hoje mesmo
-        </a>
-      </div>
-
-      <h1>Thiago Dantas</h1>
-      <h2>Psicólogo Comportamental (CRP19/00-4658)</h2>
-
-      <h3>Quem eu sou?</h3>
-      <p>
-        Sou Thiago Dantas, psicólogo clínico e pesquisador apaixonado por emoções e comportamento humano.
-        Mestre em Psicologia pela UFS e pós-graduando em Análise do Comportamento, atuo com escuta sensível e comprometida.
-        Acredito na força do autoconhecimento como caminho para o bem-estar.
-        Gosto de futebol, de escrever e de me reconectar com a natureza — meu refúgio e inspiração.
-      </p>
-      <a class="botao-whatsapp" href="https://wa.me/5579996037276?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20consulta">
-        Comece hoje mesmo
-      </a>
+        <div class="drive-container">
+            <div class="drive-wrapper">
+                <!-- Capa personalizada para o vídeo -->
+                <div class="drive-thumbnail" id="driveThumbnail">
+                    <img src="capa_video.jpg" alt="Capa do vídeo">
+                    <div class="drive-play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                
+                <!-- Player do Google Drive -->
+                <iframe id="drivePlayer" 
+                        src="https://drive.google.com/file/d/1ocHbSCcfUiwKWD8CY73JOHKlQpcJLpLC/preview" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; clipboard-write; encrypted-media; web-share" 
+                        allowfullscreen
+                        style="display:none"></iframe>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <section class="escuro" id="depoimentos">
-    <div class="container">
-      <h3>Depoimentos</h3>
+    <!-- Suas Dores (Termos suavizados) -->
+    <section id="dores" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Desafios Emocionais</h2>
+            <p class="section-subtitle">Entendo suas dificuldades e ofereço um caminho para superá-las com terapia especializada</p>
+            
+            <div class="dores-container">
+                <div class="dor-card">
+                    <div class="dor-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="dor-content">
+                        <h3>Preocupação Excessiva</h3>
+                        <p>Se você sente inquietação constante, pensamentos acelerados ou dificuldade para relaxar, a terapia pode ajudar a encontrar equilíbrio e tranquilidade. Vamos desenvolver estratégias para gerenciar esses sentimentos.</p>
+                        <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+ajuda+com+preocupação+excessiva&type=phone_number&app_absent=0" class="btn btn-primary">Falar sobre isso</a>
+                    </div>
+                </div>
+                
+                <div class="dor-card">
+                    <div class="dor-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="dor-content">
+                        <h3>Desânimo Persistente</h3>
+                        <p>Se você se sente sem energia, com baixo ânimo ou falta de motivação, não está sozinho. Vamos trabalhar juntos para recuperar o brilho e o propósito na sua vida, encontrando novas perspectivas.</p>
+                        <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+preciso+de+ajuda+com+desânimo&type=phone_number&app_absent=0" class="btn btn-primary">Falar sobre isso</a>
+                    </div>
+                </div>
+                
+                <div class="dor-card">
+                    <div class="dor-icon">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <div class="dor-content">
+                        <h3>Dificuldades Relacionais</h3>
+                        <p>Se você enfrenta desafios em relacionamentos amorosos, familiares ou profissionais, a terapia pode ajudar a melhorar sua comunicação, estabelecer limites saudáveis e construir conexões mais significativas.</p>
+                        <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+ajuda+com+relacionamentos&type=phone_number&app_absent=0" class="btn btn-primary">Falar sobre isso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="depoimento">
-        <div class="avaliacao">★★★★★</div>
-        <p>“O psicólogo Thiago Dantas tem sido um apoio essencial desde o início do processo terapêutico. Recomendo seu trabalho com confiança e gratidão.”</p>
-      </div>
+    <!-- Como Funciona -->
+    <section id="processo" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Como Funciona a Terapia</h2>
+            <p class="section-subtitle">Entenda o processo terapêutico e como ele pode transformar sua vida</p>
+            
+            <div class="processo">
+                <div class="processo-item">
+                    <div class="processo-numero">1</div>
+                    <h3>Primeiro Contato</h3>
+                    <p>Tudo começa pelo WhatsApp ou ligação. Nesse primeiro contato, vamos estabelecer um horário e uma data para a primeira consulta. É o início de uma jornada transformadora.</p>
+                </div>
+                
+                <div class="processo-item">
+                    <div class="processo-numero">2</div>
+                    <h3>Primeira Consulta</h3>
+                    <p>O primeiro encontro é um momento único. Vou te perguntar: "O que lhe trouxe até este momento aqui comigo?" e "Quem você espera se tornar com os nossos encontros?".</p>
+                </div>
+                
+                <div class="processo-item">
+                    <div class="processo-numero">3</div>
+                    <h3>Acompanhamento</h3>
+                    <p>Com carinho e escuta ativa, vamos explorar sua história, suas queixas e suas relações. Juntos, construiremos um caminho para sua transformação pessoal e bem-estar emocional.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+marcar+minha+primeira+consulta&type=phone_number&app_absent=0" class="btn btn-primary">Agendar primeira consulta</a>
+            </div>
+        </div>
+    </section>
 
-      <div class="depoimento">
-        <div class="avaliacao">★★★★★</div>
-        <p>“Thiago é um ótimo profissional. Gostei muito e super recomendo!! Além de ser muito atencioso e acolhedor, ele conduz a sessão de forma leve e descontraída.”</p>
-      </div>
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-subtitle">O que meus pacientes dizem sobre o processo terapêutico</p>
+            
+            <div class="depoimentos-container">
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"O psicólogo Thiago Dantas tem sido um apoio essencial desde o início do processo terapêutico. Recomendo seu trabalho com confiança e gratidão."</p>
+                    <p class="depoimento-autor">- Ana C., 32 anos</p>
+                </div>
+                
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"Thiago é um ótimo profissional. Gostei muito e super recomendo!! Além de ser muito atencioso e acolhedor, ele conduz a sessão de forma leve e descontraída."</p>
+                    <p class="depoimento-autor">- Pedro R., 28 anos</p>
+                </div>
+                
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"Tive uma experiência incrível com o psicólogo Thiago Dantas. Profissional acolhedor, empático e extremamente competente. Sua escuta ativa e suas orientações fizeram toda a diferença no meu processo de autoconhecimento e cura. Recomendo de olhos fechados!"</p>
+                    <p class="depoimento-autor">- Mariana S., 35 anos</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="depoimento">
-        <div class="avaliacao">★★★★★</div>
-        <p>Tive uma experiência incrível com o psicólogo, Thiago Dantas. Profissional acolhedor, empático e extremamente competente. Sua escuta ativa e suas orientações fizeram toda a diferença no meu processo de autoconhecimento e cura. Recomendo de olhos fechados!</p>
-      </div>
-    </div>
-  </section>
+    <!-- Contato -->
+    <section id="contato" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-subtitle">Entre em contato para agendar sua consulta ou tirar dúvidas</p>
+            
+            <div class="contato-container">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contato-text">
+                            <h3>Endereço</h3>
+                            <p>Horizonte Jardins Offices - Jardins, Aracaju - SE, 49020-550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contato-text">
+                            <h3>Telefone</h3>
+                            <p>(79) 99603-7276</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contato-text">
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/psi.thiagodantas" target="_blank">@psi.thiagodantas</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="contato-text">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 20h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-form">
+                    <h3>Envie uma mensagem</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-form">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="claro" id="contato">
-    <div class="container">
-      <h3>Contato</h3>
-      <p>Endereço: Horizonte Jardins Offices - Jardins, Aracaju - SE, 49020-550</p>
-      <p>Telefone: (79) 99603-7276</p>
-      <p>Siga-me no Instagram: <a href="https://www.instagram.com/psi.thiagodantas" target="_blank">@psi.thiagodantas</a></p>
-      <p>Assista minha entrevista no YouTube: <a href="https://www.youtube.com/live/pE4K4F_MUz4?si=wqHtq8tKbfSvsBUR" target="_blank">Clique aqui</a></p>
-    </div>
-  </section>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=5579996037276&text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+consulta&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo-perto-com-CRP.png" alt="Logo Psicólogo Thiago Dantas">
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#dores">Desafios Emocionais</a>
+                    <a href="#processo">Como Funciona</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/psi.thiagodantas" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="copyright">
+                    © 2023 Psicólogo Thiago Dantas. Todos os direitos reservados. CRP: XX/XXXXX
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Suavizar scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animação ao rolar
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementos = document.querySelectorAll('.dor-card, .processo-item, .depoimento-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elementos.forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(20px)"; /* Animação mais sutil */
+                el.style.transition = "opacity 0.5s ease, transform 0.5s ease"; /* Duração reduzida */
+                observer.observe(el);
+            });
+        });
+
+        // Simulação de envio de formulário
+        document.querySelector('.contato-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+            this.reset();
+        });
+        
+        // Controle do vídeo do Google Drive
+        document.addEventListener('DOMContentLoaded', function() {
+            const driveThumbnail = document.getElementById('driveThumbnail');
+            const drivePlayer = document.getElementById('drivePlayer');
+            
+            driveThumbnail.addEventListener('click', function() {
+                // Esconde a capa e mostra o vídeo
+                driveThumbnail.style.display = 'none';
+                drivePlayer.style.display = 'block';
+                
+                // Força o carregamento do iframe
+                const currentSrc = drivePlayer.src;
+                drivePlayer.src = currentSrc;
+            });
+        });
+    </script>
 </body>
 </html>
